@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Select from 'react-select'; // Make sure to import Select
+import Select from 'react-select';
 import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { v4 as uuidv4 } from 'uuid';
@@ -14,7 +14,6 @@ const timezones = [
     { value: 'Europe/Paris', label: 'Europe/Paris' },
     { value: 'Asia/Tokyo', label: 'Asia/Tokyo' },
     { value: 'Asia/Kolkata', label: 'Asia/Kolkata' },
-    // Add more timezones as needed
   ];
   
   const ItemTypes = {

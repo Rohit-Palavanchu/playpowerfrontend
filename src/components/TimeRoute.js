@@ -16,14 +16,7 @@ const getMinutesSinceMidnight = (dateTime) => {
 };
 
 class TimeRoute extends Component {
-  constructor(props) {
-    super(props);
-    const now = DateTime.now().setZone(props.timezone);
-    const initialSliderValue = getMinutesSinceMidnight(now);
-    this.state = {
-      sliderValue: roundToNearest5(initialSliderValue),
-    };
-  }
+  state = {sliderValue : roundToNearest5(getMinutesSinceMidnight(DateTime.now().setZone(this.props.timezone)))}
 
   componentDidUpdate(prevProps) {
     if (prevProps.timeInMinutes !== this.props.timeInMinutes) {
